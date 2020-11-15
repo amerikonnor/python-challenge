@@ -70,7 +70,7 @@ with open(output_file, "w", newline="") as analysis:
     
     #writing the analysis to the text file
     analysis.write(f'Financial Analysis\n')
-    analysis.write(f'-------------------------')
+    analysis.write(f'-------------------------\n')
     analysis.write(f'Total Months: {months}\n')
     analysis.write(f'Total: ${total}\n')
     analysis.write(f'Average Change: ${average_change:.2f}\n')
