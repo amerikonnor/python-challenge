@@ -20,18 +20,23 @@ for word in words:
 
 average_letters = letters/word_count
 
-#split on periods to approximate sentences
-sentences = data.split(".")
+#split using re module
+sentences = re.split("(?<=[.!?]) +", data)
+
 sentence_count = len(sentences)
 
 
-#split using more characters to get actual number of sentences
-re_sentences = re.split("(?<=[.!?]) +", data)
+
+#counting words again just in case some weird happened up higher
+re_total_words = 0
+for sentence in sentences:
+    re_words = sentence.split()
+    re_total_words += len(re_words)
+
+average_sentence_length = re_total_words/len(sentences)
 
 
-
-
-
-#print(f'Approximate Word Count: {word_count}')
-#print(f'Approximate Sentence Count: {sentence_count}')
-#print(f'Average Letter Count: {average_letters:.1f}')
+print(f'Approximate Word Count: {word_count}')
+print(f'Approximate Sentence Count: {sentence_count}')
+print(f'Average Letter Count: {average_letters:.1f}')
+print(f'Average Sentence Length: {average_sentence_length:.1f}')
