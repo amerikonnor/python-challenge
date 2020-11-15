@@ -4,7 +4,7 @@ import csv
 polling = os.path.join("Resources", "election_data.csv")
 
 total_votes = 0
-candidate_list = {}
+candidates = {}
 
 
 
@@ -15,4 +15,9 @@ with open(polling) as csvfile:
     csv_header = next(csvreader)
   
     for row in csvreader:
-        print(row)
+        total_votes += 1
+        vote = row[2]
+        if vote in candidates:
+            candidates[vote] += 1
+        else:
+            candidates[vote]=1
