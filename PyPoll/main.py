@@ -21,3 +21,7 @@ with open(polling) as csvfile:
             candidates[vote] += 1
         else:
             candidates[vote]=1
+
+print(f'Election Results')
+print(f'--------------------')
+print(f'Total Votes: {total_votes}')
