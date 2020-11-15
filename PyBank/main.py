@@ -1,19 +1,29 @@
 import os
 import csv
 
+csvpath = os.path.join("Resources", "budget_data.csv")
+
+#setting counters for months and totals to 0
 months = 0
 total = 0
+
+#keeping track of previous month amount outside the loop
+#to calculate month-to-month changes
+
+previous_month = 0
+change = 0
 total_change = 0
 
+#setting up to log the greatest increase, decrease data
 greatest_increase = 0
 greatest_increase_month = ""
 
 greatest_decrease = 0
 greatest_decrease_month = ""
-csvpath = os.path.join("Resources", "budget_data.csv")
+
+
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
-
   
     csv_header = next(csvreader)
 
@@ -29,16 +39,20 @@ with open(csvpath) as csvfile:
         total += amount
         
         #to keep track of the month to month change, skip it the first time
-        #but the first month will have the greatest increase and decrease in profits so far
         if months == 1:
-            greatest_increase = amount
-            greatest_increase_month = month
-            greatest_decrease = amount
-            greatest_decrease_month = month
+         pass
         else:
-            pass
-
+            change = amount - previous_month
+            total_change += change
+            if change > greatest_increase:
+                greatest_increase = change
+                greatest_increase_month = month
+            if change < greatest_decrease:
+                greatest_decrease = change
+                greatest_decrease_month = month
         
+        previous_month = amount
+
 average_change = total_change/months
 print(f'Financial Analysis')
 print(f'-------------------------')
