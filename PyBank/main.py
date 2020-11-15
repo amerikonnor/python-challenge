@@ -54,6 +54,7 @@ with open(csvpath) as csvfile:
         previous_month = amount
 
 average_change = total_change/months
+#printing to the console
 print(f'Financial Analysis')
 print(f'-------------------------')
 print(f'Total Months: {months}')
@@ -61,3 +62,18 @@ print(f'Total: ${total}')
 print(f'Average Change: ${average_change:.2f}')
 print(f'Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})')
 print(f'Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})')
+
+#creating/opening the analysis text file
+output_file = os.path.join("analysis", "analysis.txt")
+
+with open(output_file, "w", newline="") as analysis:
+    
+    #writing the analysis to the text file
+    analysis.write(f'Financial Analysis\n')
+    analysis.write(f'-------------------------')
+    analysis.write(f'Total Months: {months}\n')
+    analysis.write(f'Total: ${total}\n')
+    analysis.write(f'Average Change: ${average_change:.2f}\n')
+    analysis.write(f'Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})\n')
+    analysis.write(f'Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})')
+
