@@ -16,10 +16,11 @@ Repository contains four seperate python programs
 4. PyParagraph
   Reads in a text file and performs analysis to check the complexity of the writing
   Computes an approximate word count and sentence count, as well as an average word length (in letters) and average sentence length (in words)
-<<<<<<< HEAD
-    Having trouble getting python to split on sentences that end in a quotation. I got the second text file about movies to condense to one line (without all the new line  characters), but not sure why it isn't recognizing the periods at the end of the sentences that have a quotation mark. Oddly enough, it still gets close because it did split sentences on the period used for someone's middle initial.
-=======
-    Having trouble getting python to split on sentences that end in a quotation. I got the second text file about movies to condense to one line (without all the new line  characters), but not sure why it isn't recognizing the periods at the end of the sentences that have a quotation mark. Oddly enough, it still gets close because it did split sentences on the period used for someone's middle initial.
+  Having trouble getting python to split on sentences that end in a quotation. 
+    I got the second text file about movies to condense to one line (without all the new line  characters), 
+    but not sure why it isn't recognizing the periods at the end of the sentences that have a quotation mark. 
+    Oddly enough, it still gets close because it did split sentences on the period used for someone's middle initial.
+
     
   
  
