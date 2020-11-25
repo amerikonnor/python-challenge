@@ -52,7 +52,7 @@ for sentence in sentences:
 average_sentence_length = re_total_words/len(sentences)
 
 
-#print(f'Approximate Word Count: {word_count}')
-#print(f'Approximate Sentence Count: {sentence_count}')
-#print(f'Average Letter Count: {average_letters:.1f}')
-#print(f'Average Sentence Length: {average_sentence_length:.1f}')
+print(f'Approximate Word Count: {word_count}')
+print(f'Approximate Sentence Count: {sentence_count}')
+print(f'Average Letter Count: {average_letters:.1f}')
+print(f'Average Sentence Length: {average_sentence_length:.1f}')
