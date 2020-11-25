@@ -22,5 +22,4 @@ Repository contains four seperate python programs
     Having trouble getting python to split on sentences that end in a quotation. I got the second text file about movies to condense to one line (without all the new line  characters), but not sure why it isn't recognizing the periods at the end of the sentences that have a quotation mark. Oddly enough, it still gets close because it did split sentences on the period used for someone's middle initial.
     
   
-  
->>>>>>> bd3d59d16cb5c23aff17ef13de580ba99742acc5
+ 
